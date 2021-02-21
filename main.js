@@ -98,6 +98,10 @@ document.getElementById("startgame").addEventListener("click", ()=> {
                 birdBottom === -12) {
                 fail.play();
                 clearInterval(gameTimerId);
+                gameDisplay.removeChild(pipe);
+                gameDisplay.removeChild(topPipe);
+                pipe.style.display = "none";
+                topPipe.style.display = "none";
                 gameOver();
             }
 
